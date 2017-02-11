@@ -1,40 +1,24 @@
 def isBalanced(exp):
-    # The conditions that are ALWAYS NOT balanced ("NO")
-    # - When the following conditions are NOT MET, then the given expression is BALANCED.
-    # 1: the length is 1
-    # 2: the first character is "close" bracket
-    #    the length is odd 
-    # 3: the last character is "open" bracket
-    # 4: the expression has anything "unpaired" brackets: "(]", "(}", "[)", "[}", "{)", "{]"
-    if len(exp) == 1:
-        return "NO"
+    pairs = ["{}", "[]", "()"]
     
-    if exp[0] in "}])":
-        return "NO"
-
-    if len(exp) % 2 > 0:
-        return "NO"
+    pairExist = False
     
-    endIdx = len(exp) - 1
-    if exp[endIdx] in "{[(":
-        return "NO"
-    
-    if exp.count("{") != exp.count("}"):
-        return "NO"
-        
-    if exp.count("[") != exp.count("]"):
-        return "NO"
-        
-    if exp.count("(") != exp.count(")"):
-        return "NO"
-        
-    if "(]" in exp or "(}" in exp or "[)" in exp or "[}" in exp or "{)" in exp or "{]" in exp:
-        return "NO"
-    
-    return "YES"
+    for p in pairs:
+        if p in exp:
+            pairExist = True
+            if len(exp) > 2:
+                idx = exp.find(p)
+                exp = exp[:idx] + exp[idx+2:]
+                       
+    if pairExist == False:
+        print ("NO")
+    elif len(exp) == 2 and exp in pairs:
+        print ("YES")
+    else:
+        isBalanced(exp)
         
 t = int(input().strip())
 for a0 in range(t):
     exp = input().strip()
-    print (isBalanced(exp))
+    isBalanced(exp)
     
