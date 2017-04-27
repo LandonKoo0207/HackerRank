@@ -1,3 +1,6 @@
+# Solution for Bigger is Greater
+# Problem description at https://www.hackerrank.com/challenges/bigger-is-greater
+
 def nextlexPerm(arr):
     nextPerm = ""
             
