@@ -1,4 +1,6 @@
-import sys
+# Solution for Encryption
+# Problem description at https://www.hackerrank.com/challenges/encryption
+
 import math
 
 s = input().strip()
