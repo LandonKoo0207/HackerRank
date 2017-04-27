@@ -1,3 +1,6 @@
+# Solution for Append and Delete
+# Problem description at https://www.hackerrank.com/challenges/append-and-delete
+
 s = input().strip()
 t = input().strip()
 k = int(input().strip())
