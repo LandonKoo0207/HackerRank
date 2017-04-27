@@ -1,3 +1,6 @@
+# Solution for Save The Prisoner
+# Problem description at https://www.hackerrank.com/challenges/save-the-prisoner
+
 t = int(input().strip())
 for i in range(t):
     n, m, s = [int(x) for x in input().strip().split(" ")]
