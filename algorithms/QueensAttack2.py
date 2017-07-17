@@ -36,26 +36,32 @@ if k != 0:
 
         # For the obstacle is in the same row as the queen
         if rObstacle == rQueen:
+            # Count squares in the right side of the queen
             if cObstacle < cQueen:
                 if cObstacle > col_left_obstacle:
                     col_left_obstacle = cObstacle
+            # Count squares in the left side of the queen
             elif cObstacle > cQueen:
                 if n - cObstacle + 1 > col_right_obstacle:
                     col_right_obstacle = n - cObstacle + 1
         # For the obstacle is in the same column as the queen
         elif cObstacle == cQueen:
+            # Count squares in the lower side of the queen
             if rObstacle < rQueen:
                 if rObstacle > row_bottom_obstacle:
                     row_bottom_obstacle = rObstacle
+            # Count squares in the upper side of the queen
             elif rObstacle > rQueen:
                 if n - rObstacle + 1 > row_upper_obstacle:
                     row_upper_obstacle = n - rObstacle + 1
+                    
         # For the obstacle is in the diaognal to the queen
         else:
             # if the obstacle is not affecting the attackable squares
             # skip the counting
             if abs(rQueen - rObstacle) == abs(cQueen - cObstacle):
                 if rObstacle - rQueen > 0:
+                    # For obstacles in the diaognal direction, located to the upper of the queen
                     if cObstacle < cQueen:
                         if cObstacle > diaognal_upper_left[1]:
                             diaognal_upper_left = (rObstacle, cObstacle, True)
@@ -63,6 +69,7 @@ if k != 0:
                         if cObstacle < diaognal_upper_right[1]:
                             diaognal_upper_right = (rObstacle, cObstacle, True)
                 elif rObstacle - rQueen < 0:
+                    # For obstacles in the diaognal direction, located to the lower of the queen
                     if cObstacle < cQueen:
                         if cObstacle > diaognal_bottom_left[1]:
                              diaognal_bottom_left = (rObstacle, cObstacle, True)
