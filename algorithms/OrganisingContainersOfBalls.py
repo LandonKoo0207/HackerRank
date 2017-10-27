@@ -3,7 +3,7 @@
 
 # The balls can only be swapped, meaning the number of balls in each container will remain unchanged.
 # Therefore, the numbers of balls in containers must be aligend with the numbers of balls of each type
-# e.g. For example, if there are 3 containers containing 3, 6, 9 balls, 
+# e.g. For example, if there are 3 containers containing 3, 6, 9 balls,
 # then there must be 3 balls of one type, 6 balls of another type and 9 balls of the other type.
 
 q = int(input().strip())
