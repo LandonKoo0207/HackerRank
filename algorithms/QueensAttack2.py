@@ -82,7 +82,7 @@ if k != 0:
 
     # Count the attackable squares in the diagonal directions
     # Reduce the count only when there is any obstacle in a dianognal direction
-    # otherwise, count all the possible squares in the direction
+    # otherwise, count all the possible squares in the direction 
     if diagonal_upper_left[2]:
         upper_left -= min(n - diagonal_upper_left[0] + 1, diagonal_upper_left[1])
 
