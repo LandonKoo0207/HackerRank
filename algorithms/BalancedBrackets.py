@@ -17,7 +17,7 @@ def isBalanced(exp):
                 idx = exp.find(p)
                 exp = exp[:idx] + exp[idx+2:]
     
-    # if the given string doesn't have any pair, print NO
+    # if the given string doesn't have any pair, print NO.
     # else, if the string is 2 characters long and it's a pair, print YES
     # otherwise, recursively call the function until the string meets the first 2 conditions. 
     if pairExist == False:
