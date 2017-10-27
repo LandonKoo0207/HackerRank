@@ -1,7 +1,7 @@
 # Solution for The Grid Search
 # Problem description at https://www.hackerrank.com/challenges/the-grid-search/
 
-# Get inputs and contruct the Grid, and the Pattern grid
+# Get inputs and contruct the Grid, and the Pattern grid.
 t = int(input().strip())
 for a0 in range(t):
     R,C = input().strip().split(' ')
