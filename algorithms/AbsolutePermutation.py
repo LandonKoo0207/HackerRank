@@ -22,8 +22,7 @@ for a0 in range(t):
         
         for i in range(1, n+1):
             if add:
-                perm.append(i+k)
-                
+                perm.append(i+k)                
             else:
                 perm.append(i-k)
                 
